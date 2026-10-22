@@ -23,6 +23,7 @@ def plot(df: pd.DataFrame, type: int, save: bool, show=True):
             if save:
                 plt.savefig(Path(SAVE_PATH, "Barplot of Stress Levels"))
 
+            print("Barplot of Stress Levels generated successfully.")
         case 1:  # sleep_quality vs stress level
             sns.stripplot(
                 data=df,
@@ -41,6 +42,8 @@ def plot(df: pd.DataFrame, type: int, save: bool, show=True):
             if save:
                 plt.savefig(Path(SAVE_PATH, "Sleep Quality vs Stress Level"))
 
+            print("Sleep Quality vs Stress Level plot generated successfully.")
+
         case 2:
             sns.stripplot(
                 data=df,
@@ -58,6 +61,7 @@ def plot(df: pd.DataFrame, type: int, save: bool, show=True):
 
             if save:
                 plt.savefig(Path(SAVE_PATH, "Academic Performance vs Stress Level"))
+            print("Academic Performance vs Stress Level plot generated successfully.")
         case _:
             pass
 
